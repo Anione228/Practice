@@ -45,16 +45,15 @@ namespace distance
             Result = (Math.Sin(T1S) * Math.Sin(T2S)) + (Math.Cos(T1S) * Math.Cos(T2S) * Math.Cos(T1D - T2D));
 
             Result = Math.Cos(Result);
-           // Form2 op = new Form2();
+            // Form2 op = new Form2();
             if (FormDataValues.radioButtonKm == true)
-                label5.Text = ($"Расстояние между городами - {Result * R :f} км");
-
+                label5.Text = ($"Расстояние между городами - {Result * R:f} км");
+            else
             if (FormDataValues.radioButtonFt == true)
-                label5.Text = ($"Расстояние между городами - {Result * R* 0.621371 :f} миль");
-            
-            // Это проверка на то какая тема сейчас выбрана
-            if (FormDataValues.radioButtonDark) MessageBox.Show("DarkThemeChanged");
-            if (FormDataValues.radioButtonLight) MessageBox.Show("LightThemeChanged");
+                label5.Text = ($"Расстояние между городами - {Result * R * 0.621371:f} миль");
+            else
+                label5.Text = ("Choose Unit in Options");
+           
 
         }
 

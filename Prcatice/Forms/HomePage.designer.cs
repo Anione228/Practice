@@ -37,24 +37,24 @@
             this.labelHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelHome.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelHome.ForeColor = System.Drawing.Color.Transparent;
             this.labelHome.Location = new System.Drawing.Point(12, 9);
             this.labelHome.Name = "labelHome";
-            this.labelHome.Size = new System.Drawing.Size(769, 150);
+            this.labelHome.Size = new System.Drawing.Size(769, 260);
             this.labelHome.TabIndex = 0;
             this.labelHome.Text = "Hello Welcome to my first application. \r\nThis app can calculate distance between " +
     "two cities. \r\nMore info chek in FaQ";
+            this.labelHome.Click += new System.EventHandler(this.labelHome_Click);
             // 
             // labelName
             // 
             this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Montserrat", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelName.ForeColor = System.Drawing.Color.White;
-            this.labelName.Location = new System.Drawing.Point(13, 445);
+            this.labelName.Location = new System.Drawing.Point(1, 456);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(238, 78);
+            this.labelName.Size = new System.Drawing.Size(222, 52);
             this.labelName.TabIndex = 1;
             this.labelName.Text = "Made by Alex Yatsyna.\r\n2023 all rigts defended\r\n\r\n";
             // 
@@ -71,7 +71,6 @@
             this.Text = "bdfmdkl";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

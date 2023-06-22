@@ -58,13 +58,10 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-11, -8);
+            this.label3.Location = new System.Drawing.Point(10, 1);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 55);
             this.label3.TabIndex = 7;
@@ -72,13 +69,10 @@
             // 
             // label4
             // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(12, 258);
+            this.label4.Location = new System.Drawing.Point(3, 1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(113, 55);
             this.label4.TabIndex = 9;
@@ -86,6 +80,7 @@
             // 
             // panelTheme
             // 
+            this.panelTheme.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelTheme.Controls.Add(this.radioButtonDark);
             this.panelTheme.Controls.Add(this.label3);
             this.panelTheme.Controls.Add(this.radioButtonLight);
@@ -129,6 +124,8 @@
             // 
             // panelUnit
             // 
+            this.panelUnit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.panelUnit.Controls.Add(this.label4);
             this.panelUnit.Controls.Add(this.radioButtonFt);
             this.panelUnit.Controls.Add(this.radioButtonKm);
             this.panelUnit.Location = new System.Drawing.Point(23, 258);
@@ -174,7 +171,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.ClientSize = new System.Drawing.Size(768, 522);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTheme);
             this.Controls.Add(this.panelUnit);

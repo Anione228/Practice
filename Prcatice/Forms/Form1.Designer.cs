@@ -53,6 +53,7 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(200, 561);
             this.panelMenu.TabIndex = 0;
+            this.panelMenu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMenu_MouseMove);
             // 
             // ExitButton
             // 
@@ -194,15 +195,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelMenu;
-        private FontAwesome.Sharp.IconButton PlayButton;
         private System.Windows.Forms.Panel panellogo;
-        private FontAwesome.Sharp.IconButton ExitButton;
-        private FontAwesome.Sharp.IconButton OptionButton;
-        private FontAwesome.Sharp.IconButton InfoButton;
         private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton HomeButton1;
+        public System.Windows.Forms.Panel panelMenu;
+        public FontAwesome.Sharp.IconButton PlayButton;
+        public FontAwesome.Sharp.IconButton ExitButton;
+        public FontAwesome.Sharp.IconButton OptionButton;
+        public FontAwesome.Sharp.IconButton InfoButton;
+        public FontAwesome.Sharp.IconButton HomeButton1;
     }
 }
 

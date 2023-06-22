@@ -2,28 +2,31 @@
 using Prcatice.Helpers;
 using Prcatice.UI;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HomePage
+namespace Prcatice.Forms
 {
-   
-    public partial class HomeForm : Form
+    public partial class FaQ : Form
     {
-        public HomeForm()
+        public FaQ()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void FaQ_Load(object sender, EventArgs e)
         {
             this.BackColor = Color.FromArgb(26, 24, 58);
-
             var themes = new Themes();
-            var themeDTO = new HomeThemeDTO
+            var themeDTO = new FaQThemeDTO
             {
-                helloText = labelHome,
-                nameText = labelName,
+                FaQLabel = labelFaQ
             };
             if (FormDataValues.radioButtonLight)
             {
@@ -32,10 +35,5 @@ namespace HomePage
             }
             else themes.ChangeDarkTheme(themeDTO);
         }
-
-		private void labelHome_Click(object sender, EventArgs e)
-		{
-
-		}
-	}
+    }
 }

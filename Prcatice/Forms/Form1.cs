@@ -3,6 +3,10 @@ using System.Drawing;
 using System.Windows.Forms;
 using distance;
 using HomePage;
+using Prcatice.DTO;
+using Prcatice.Forms;
+using Prcatice.Helpers;
+using Prcatice.UI;
 //Добавть выделение подпунктов!!!!!!!!
 
 namespace Prcatice
@@ -14,12 +18,12 @@ namespace Prcatice
             InitializeComponent();
         }
         
-        private void ExitButton_Click(object sender, EventArgs e)
+        public void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void HomeButton1_Click(object sender, EventArgs e)
+        public void HomeButton1_Click(object sender, EventArgs e)
         {
             HomeForm Home = new HomeForm();
             Home.TopLevel = false;
@@ -28,9 +32,10 @@ namespace Prcatice
             panel1.Controls.Add(Home);
             Home.BringToFront();
             Home.Show();
-        }
+           
+            }
 
-        private void Form1_Load(object sender, EventArgs e)
+            public void Form1_Load(object sender, EventArgs e)
         {
             HomeForm Home = new HomeForm();
             Home.TopLevel = false;
@@ -40,10 +45,11 @@ namespace Prcatice
             Home.BringToFront();
             Home.Show();
             panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+
             
         }
 
-        private void PlayButton_Click(object sender, EventArgs e)
+        public void PlayButton_Click(object sender, EventArgs e)
         {
             Distance Distan = new Distance();
             Distan.TopLevel = false;
@@ -54,12 +60,18 @@ namespace Prcatice
             Distan.Show();
         }
 
-        private void InfoButton_Click(object sender, EventArgs e)
+        public void InfoButton_Click(object sender, EventArgs e)
         {
-            
+            FaQ Info = new FaQ();
+            Info.TopLevel = false;
+            Info.FormBorderStyle = FormBorderStyle.None;
+            Info.Dock = DockStyle.Fill;
+            panel1.Controls.Add(Info);
+            Info.BringToFront();
+            Info.Show();
         }
 
-        private void OptionButton_Click(object sender, EventArgs e)
+        public void OptionButton_Click(object sender, EventArgs e)
         {
             Form2 Opti = new Form2();
             Opti.TopLevel = false;
@@ -69,5 +81,49 @@ namespace Prcatice
             Opti.BringToFront();
             Opti.Show();
         }
+
+        private void panelMenu_MouseMove(object sender, MouseEventArgs e) // тут колхоз получился потому что я пробовал через ссылку 
+        {                                                                 //и через условия chekedchanged форма не менялась так что пока так
+            
+            var themes = new Themes();
+            var themeDTO = new MainThemeDTO
+            {
+                MainPanel = panelMenu,
+                playB = PlayButton,
+                faqB = InfoButton,
+                opB = OptionButton,
+                exitB = ExitButton,
+            };
+            if (FormDataValues.radioButtonLight)
+            {
+                themes.ChangeLightTheme(themeDTO);
+                panelMenu.BackColor = Color.DarkGray;
+            }
+            else
+            {
+                themes.ChangeDarkTheme(themeDTO);
+                panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+            }
+        }
     }
 }
+//Form1 main = new Form1();
+//var themes = new Themes();
+//var themeDTO = new MainThemeDTO
+//{
+//    MainPanel = main.panelMenu,
+//    playB = main.PlayButton,
+//    faqB = main.InfoButton,
+//    opB = main.OptionButton,
+//    exitB = main.ExitButton,
+//};
+//if (FormDataValues.radioButtonLight)
+//{
+//    themes.ChangeLightTheme(themeDTO);
+//    main.panelMenu.BackColor = Color.DarkGray;
+//}
+//else
+//{
+//    themes.ChangeDarkTheme(themeDTO);
+//    main.panelMenu.BackColor = Color.FromArgb(31, 30, 68);
+//}
