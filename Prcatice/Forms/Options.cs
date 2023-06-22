@@ -10,8 +10,7 @@ namespace Prcatice
 {
     public partial class Form2 : Form
     {
-        private OptionsThemeDTO themeDTO;
-        private HomeThemeDTO themehDTO;
+        private OptionsThemeDTO optionsThemeDTO;
         public Form2()
         {
             InitializeComponent();
@@ -20,7 +19,7 @@ namespace Prcatice
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            themeDTO = new OptionsThemeDTO
+            optionsThemeDTO = new OptionsThemeDTO
             {
                 optionLabel = label1,
                 themeLabel = label3,
@@ -30,8 +29,6 @@ namespace Prcatice
                 radioButtonKm = radioButtonKm,
                 radioButtonFt = radioButtonFt
             };
-
-            
 
             this.BackColor = Color.FromArgb(26, 24, 58);
            
@@ -75,8 +72,7 @@ namespace Prcatice
         {
             HomeForm homeP = new HomeForm();
             var themes = new Themes();
-            themes.ChangeDarkTheme(themeDTO);
-            themes.ChangeDarkTheme(themehDTO);
+            themes.ChangeDarkTheme(optionsThemeDTO);
             homeP.BackColor = Color.FromArgb(26, 24, 58);
             this.BackColor = Color.FromArgb(26, 24, 58);
             FormDataValues.radioButtonDark = radioButtonDark.Checked;
@@ -86,8 +82,7 @@ namespace Prcatice
         {
             HomeForm homeP = new HomeForm();
             var themes = new Themes();
-            themes.ChangeLightTheme(themeDTO);
-            themes.ChangeDarkTheme(themehDTO);
+            themes.ChangeLightTheme(optionsThemeDTO);
             this.BackColor = Color.White;
             homeP.BackColor = Color.White;
             FormDataValues.radioButtonLight = radioButtonLight.Checked;

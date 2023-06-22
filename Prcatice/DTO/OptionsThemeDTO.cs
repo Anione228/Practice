@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Prcatice.DTO
 {
@@ -14,11 +13,4 @@ namespace Prcatice.DTO
 		public RadioButton radioButtonFt { get; set; }
 
 	}
-	public class HomeThemeDTO
-	{
-		public Label Hello { get; set; }
-		public Label Name { get; set; }
-
-	}
-
 }

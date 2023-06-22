@@ -1,4 +1,6 @@
 ﻿
+using Prcatice.DTO;
+
 namespace Prcatice.Helpers
 {
 	public static class FormDataValues
@@ -9,5 +11,8 @@ namespace Prcatice.Helpers
         public static bool radioButtonKm { get; set; }
         public static bool radioButtonFt { get; set; }
 
-    }
+        public static HomeThemeDTO homeThemeDTO { get; set; }
+
+
+	}
 }

@@ -30,13 +30,14 @@ namespace Prcatice.UI
         }
         public void ChangeDarkTheme(HomeThemeDTO themehDTO)
         {
-            themehDTO.Hello.ForeColor = Color.White;
-            themehDTO.Name.ForeColor = Color.White;
+            themehDTO.helloText.ForeColor = Color.White;
+            themehDTO.nameText.ForeColor = Color.White;
         }
         public void ChangeLightTheme(HomeThemeDTO themehDTO)
         {
-            themehDTO.Hello.ForeColor = Color.Black;
-            themehDTO.Name.ForeColor = Color.Black;
+            themehDTO.helloText.ForeColor = Color.Black;
+            themehDTO.nameText.ForeColor = Color.Black;
+
         }
     }
 }
