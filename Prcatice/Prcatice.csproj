@@ -53,8 +53,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="DTO\MainThemeDTO.cs" />
     <Compile Include="DTO\FaQThemeDTO.cs" />
+=======
+>>>>>>> 84db2e0718be21681182d4d447ceae686b9e6a3d
     <Compile Include="DTO\HomeThemeDTO.cs" />
     <Compile Include="DTO\OptionsThemeDTO.cs" />
     <Compile Include="Forms\Distance.cs">
