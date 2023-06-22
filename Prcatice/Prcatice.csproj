@@ -53,6 +53,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DTO\HomeThemeDTO.cs" />
     <Compile Include="DTO\OptionsThemeDTO.cs" />
     <Compile Include="Forms\Distance.cs">
       <SubType>Form</SubType>
